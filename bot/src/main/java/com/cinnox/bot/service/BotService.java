@@ -69,6 +69,11 @@ public class BotService {
         }
     }
 
+    public List<String> getMessageByUserId(String userId) {
+        List<UserMessage> userMessages = userMessageRepository.findByUserId(userId);
+        return userMessages.stream().map(UserMessage::getMessage).toList();
+    }
+
     public int broadcast(String message) {
         List<String> userIds = userInfoRepository.findDistinctUserIds();
         if (userIds.size() > 0) {
