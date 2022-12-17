@@ -1,4 +1,4 @@
-# cinnox home work
+# Line chat bot content Management using Java Spring Boot and mongoDB
 
 
 ### Send message from user demo, server will reply 'you said: XXX'
